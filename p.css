@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Josefin Sans", sans-serif;
+  line-height: 1.6;
+}
+header {
+  position: relative;
+  height: 40vh;
+  background-image: url(/images/bg-desktop-dark.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.title {
+  position: relative;
+  margin-bottom: 1em;
+}
+.container {
+  width: min(600px, 90%);
+  margin: auto;
+}
+header .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+h1 {
+  font-size: 3rem;
+  color: var(--text-color);
+  font-weight: 700;
+}
+header img {
+  cursor: pointer;
+}
+button {
+  all: unset;
+}
+form button {
+  height: 100%;
+  width: 100%;
+}
+input {
+  font-size: 18px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 1em 1em 1em 3em;
+  border-radius: 6px;
+}
+form {
+  position: relative;
+}
+.list {
+  min-height: 60vh;
+  background-color: var(--background-section);
+}
+span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.circle {
+  left: 1em;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  border: 1px solid var(--light-desaturated-color);
+}
+.delete {
+  right: 1em;
+}
+span:hover {
+  border-color: hsl(192, 100%, 69%);
+}
+.delete img:hover {
+  transform: translateY(-2.5px);
+}
+.listStyle > * {
+  position: relative;
+  padding: 1em 3em 1em 3em;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: 18px;
+  border-bottom: 1px solid var(--light-desaturated-color);
+  word-wrap: break-word;
+}
+
+.list .container div:first-child {
+  border-radius: 6px 6px 0 0;
+}
+.footer {
+  position: relative;
+  border: none;
+  border-radius: 0 0 6px 6px;
+  padding: 1em;
+  background-color: var(--background-color);
+  color: var(--light-desaturated-color);
+}
+.items h4 {
+  padding: 0 8px;
+}
+.items {
+  justify-content: center;
+  position: absolute;
+  bottom: 15px;
+  color: var(--light-desaturated-color);
+  left: 50%;
+  transform: translateX(-50%);
+}
+h4 {
+  cursor: pointer;
+  transition: 0.15s linear;
+}
+h4:hover {
+  color: var(--text-color);
+}
+.list .container {
+  position: relative;
+  bottom: 2em;
+}
+.footer > :first-child:hover {
+  color: inherit;
+}
+.hide {
+  visibility: hidden;
+}
+
+.check {
+  background-image: url(/images/icon-check.svg),
+    linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  transition: all 0.1s ease-in-out;
+}
+.checkpar {
+  text-decoration: line-through;
+  color: var(--light-desaturated-color);
+  transition: all 0.2s ease-in-out;
+}
+.blue {
+  color: var(--blue-color);
+  transition: color 0.1s ease-in-out;
+}
+.blue:hover {
+  color: var(--blue-color);
+}
+.deleteAnimation {
+  animation: delete 0.3s ease-in-out;
+}
+@keyframes delete {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(40%);
+    opacity: 0;
+  }
+}
+
+.activeChange {
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+}
+
+@media (max-width: 500px) {
+  .footer {
+    position: relative;
+  }
+  .items {
+    position: unset;
+    transform: translateX(0);
+    border-radius: 6px;
+    padding: 1em;
+    background-color: var(--background-color);
+    margin-top: 1em;
+  }
+}
+
+/*mode animation*/
+
+.body {
+  animation: body 0.8s ease-out;
+}
+@keyframes body {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

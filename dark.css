@@ -1,0 +1,7 @@
+:root {
+  --background-section: hsl(235, 21%, 11%);
+  --background-color: hsl(235, 24%, 19%);
+  --text-color: hsl(234, 39%, 85%);
+  --light-desaturated-color: hsl(233, 14%, 35%);
+  --blue-color: hsl(192, 100%, 67%);
+}

@@ -1,0 +1,19 @@
+:root {
+  --background-section: hsl(0, 0%, 98%);
+  --background-color: hsl(236, 33%, 92%);
+  --Light-Grayish-Blue: hsl(233, 11%, 84%);
+  --light-desaturated-color: hsl(236, 9%, 61%);
+  --text-color: hsl(235, 19%, 35%);
+  --blue-color: hsl(192, 100%, 29%);
+}
+h1 {
+  color: var(--Light-Grayish-Blue);
+}
+header {
+  position: relative;
+  height: 40vh;
+  background-image: url(/images/bg-desktop-light.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
