@@ -21,13 +21,7 @@ let modeClass = localStorage.getItem(LOCAL_STORAGE_MODE.class) || "moon"
 
 localstr()
 
-function theme(mod,img) {
-    mode = `${mod}.css`
-    modeImg = `/images/icon-${img}.svg`
-    document.querySelector("[data-img]").src=modeImg
-    document.querySelector("[data-mode]").href=mode
-    document.querySelector('body').classList.add('body') 
-}
+
 
 //change to dark/light mode
 lightBtnImg.addEventListener("click",()=>{
@@ -228,4 +222,12 @@ function localstr() {
     lightDark()
     anonymous()
     activeItem(h4[parseInt(activeId)-1]) 
+}
+
+function theme(mod,img) {
+    mode = `${mod}.css`
+    modeImg = `/images/icon-${img}.svg`
+    document.querySelector("[data-img]").src=modeImg
+    document.querySelector("[data-mode]").href=mode
+    document.querySelector('body').classList.add('body') 
 }
